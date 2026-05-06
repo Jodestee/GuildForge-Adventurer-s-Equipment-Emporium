@@ -17,7 +17,7 @@
 
 int main() {
     try {
-        GuildManager guild("guild_save.csv");   // Construct manager.
+        GuildManager guild("guild_save.csv");   // Construct manager. It also contains the csv file that contains the save data
         guild.run();                            // Hand control over to it.
     }
     // ---- Last-resort exception handlers ----
