@@ -22,13 +22,13 @@ Weapon::Weapon()
 // calls the base class, sets this weapon damage to 0, and sets durability to 0.
 // ---- Full constructor ----
 // Forwards the base fields to Equipment(...) and stores damage/durability.
-Weapon::Weapon(const std::string& id, //the weapons identifier
-               const std::string& name,// what the weapon is called
-               double basePrice,// how much it costs
-               bool available,//whether its in stock
+Weapon::Weapon(const std::string& id, // The weapons identifier
+               const std::string& name,// What the weapon is called
+               double basePrice,// How much it costs
+               bool available,// whether its in stock
                const std::string& description,//words describing the weapon
-               int damage,// how powerfull it is
-               int durability) // how long can the weapon be used
+               int damage,// How powerfull it is
+               int durability) // How long can the weapon be used
     : Equipment(id, name, basePrice, available, description), //this gives the base class all the info it needs
       damage(damage), durability(durability) {} //
 
@@ -56,7 +56,7 @@ void Weapon::displayDetails() const {
               << "   Durability: " << Color::B_YELLOW << durability
               << Color::RESET
               << "   Status: ";
-//^^^^^^^^^all this up here is talkling about formatted weapons, ID displays and so on. 
+//^^^^^^^^^all this up here is talking about formatted weapons, ID displays, and so on. 
 // using different colors and spacing to make everything look nice
     if (available) {
         std::cout << Color::SUCCESS << "Available"   << Color::RESET << "\n";
