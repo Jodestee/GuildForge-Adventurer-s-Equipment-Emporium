@@ -15,25 +15,25 @@
 
 #include "Equipment.h"               // We inherit from Equipment.
 
-// 'public Equipment' = Weapon IS-A Equipment, with public access preserved.
-// this section has to do with: 
-// weapon type
-// how much harm can be dealt with weapon
-// how long can it be used before it breaks
+// Public Equipment' = Weapon IS-A Equipment, with public access preserved.
+// This section has to do with: 
+// Weapon type
+// How much harm can be dealt with a weapon
+// How long can it be used before it breaks
 class Weapon : public Equipment {
 private:                             // Weapon-specific fields, hidden from outside.
     int damage;                      // Combat damage value the weapon deals.
     int durability;                  // How many uses before the weapon breaks.
 //
 public:
-    Weapon();  //this creats a weapon object                                        // Default constructor.
+    Weapon();  // This creates a weapon object                                        // Default constructor.
     Weapon(const std::string& id,  //the weapons ID                    // Full constructor takes
            const std::string& name,  //the weapons name                  // every base-class field
            double basePrice,   //how much the weapon costs                        // PLUS the two new ones.
-           bool available,     //checks wether the weapon is in stock
+           bool available,     //checks whether the weapon is in stock
            const std::string& description,   //describes the weapon
            int damage,  //the amount of damage
-           int durability);  //how long the weapon last before it breaks
+           int durability);  // How long the weapon lasts before it breaks
 
     // ---- Polymorphic overrides ----
     // 'override' tells the compiler "I am replacing a virtual function";
@@ -42,7 +42,7 @@ public:
     void displayDetails() const override;  //this will show the weapons information
     std::string useItem() override;   //this function is called when the weapon is used
     std::string typeTag() const override { return "Weapon"; }
-//^^^^^^ returns a lable that identifies what kind of item it is^^^^
+//^^^^^^ returns a label that identifies what kind of item it is^^^^
     // Read-only accessors for the new fields.
     int getDamage()     const { return damage; }  //this reads the weapons damage value
     int getDurability() const { return durability; } //cheacks the durability that is left
