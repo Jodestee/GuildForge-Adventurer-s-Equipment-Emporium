@@ -22,11 +22,11 @@ Armor::Armor()
 // Forwards base-class fields up, stores defense and durability locally.
 Armor::Armor(const std::string& id,//the armors unique ID
              const std::string& name,//the armors name
-             double basePrice,//how much the armor cost
-             bool available,//wether it can be rented or used
-             const std::string& description,//words describing the armor
+             double basePrice,// How much the armor costs
+             bool available,//Whether it can be rented or used
+             const std::string& description,// Words describing the armor
              int defense,//the block amount
-             int durability)//how long untill the item breaks apart
+             int durability)// How long until the item breaks apart
     : Equipment(id, name, basePrice, available, description),//gives values to the base class
       defense(defense), durability(durability) {}
 
