@@ -27,7 +27,7 @@ public:
           const std::string& description,
           int defense,
           int durability);
-//^^^^^^^^^^this is a full const setting all fields. the last two lines are how strong and how long it can last.^^^^^^^
+//^^^^^^^^^^this is a full const setting all fields. The last two lines are how strong and how long it can last.^^^^^^^
     // ---- Polymorphic overrides ----
     void displayDetails() const override;// shows all armor info on screen
     std::string useItem() override;//what happens when the armor is used
