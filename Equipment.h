@@ -21,7 +21,7 @@ class Equipment {
 protected:                           // 'protected' = derived classes can read these,
                                      // but other code outside the family cannot.
     std::string id;                  // Unique identifier (e.g. "W001", "A002").
-    std::string name;                // Display name shown to the player.
+    std::string name;                // Display equipments name shown to the player.
     double      basePrice;           // Daily rental price in gold.
     bool        available;           // True if not currently rented out.
     std::string description;         // Flavor text shown in inventory listings.
